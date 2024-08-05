@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""app file"""
 from flask import Flask, Blueprint
 from models import storage
 from api.v1.views import app_views
