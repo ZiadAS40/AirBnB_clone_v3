@@ -22,7 +22,7 @@ def hbnbStatus():
 
 
 @app_views.route('/stats', strict_slashes=False)
-def hbnbStatus():
+def hbnbStats():
     """the number of stats"""
     count_dict = {}
     for cls in classes:
