@@ -43,15 +43,14 @@ def post_state():
     """post a new state"""
 
     if not request.get_json():
-        abort(400, descreption="Not a JSON")
+        abort(400, description="Not a JSON")
 
     if 'name' not in request.get_json():
-        abort(400, descreption="Missing name")
-    
+        abort(400, description="Missing name")
+
     data = request.get_json()
     instance = State(**data)
     instance.save()
-
     return make_response(jsonify(instance.to_dict()), 201)
 
 
@@ -64,7 +63,7 @@ def put_state(state_id):
         abort(404)
 
     if not request.get_json():
-        abort(400, descreption="Not a JSON")
+        abort(400, description="Not a JSON")
 
     ig = ['id', 'created_at', 'updated_at']
 
